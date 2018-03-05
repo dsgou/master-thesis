@@ -1,0 +1,190 @@
+% demo.tex
+%
+% Enjoy, evolve, and share!
+%
+% Compile it as follows:
+%	xelatex demo.tex
+%   bibtex demo.aux
+%   bibtex lop.aux (run this, only if you pass option 'lop' below)
+%   xelatex demo.tex && xelatex demo.tex
+%
+% Alternatively, compile it using `make -i' (see the provided Makefile).
+%
+% Check file `diphdthesis.cls' for other configuration options.
+%
+\documentclass[inscr,ack,preface]{diphdthesis}
+
+%\usepackage{graphicx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% User-specific package inclusions %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{
+    unicode=true,                     % non-Latin characters in bookmarks
+    pdffitwindow=true,                % page fit to window when opened
+    pdfnewwindow=true,                % links in new window
+    pdfkeywords={},                   % list of keywords
+    colorlinks=true,                  % false: boxed links; true: colored links
+    linkcolor=black,                  % color of internal links
+    citecolor=black,                  % color of links to bibliography
+    filecolor=black,                  % color of file links
+    urlcolor=black,                   % color of external links
+    pdftitle={},                      % title
+    pdfauthor={},                     % author
+    pdfsubject={}                     % subject of the document
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% User-specific package inclusions %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% User-specific configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% User-specific configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Required Metadata %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First name, last name
+%
+\authorFirstGr{Δημήτρης}
+\authorFirstAbrGr{Δ.} % abbreviation of first name
+\authorMiddleGr{Η.}   % abbreviation of father's first name
+\authorLastGr{Σγουρόπουλος}
+\authorFirstEn{Dimitris}
+\authorFirstAbrEn{D.}
+\authorMiddleEn{I.}
+\authorLastEn{Sgouropoulos}
+
+%
+% The title of the thesis
+%
+\titleGr{Μάθηση πολλαπλών στόχων στην μουσική με νευρωνικά δίκτυα}
+\titleEn{Music multitask learning with neural networks}
+
+%
+% Month followed by Year
+%
+\dateGr{ΜΑΪΟΣ 2010}
+\dateEn{MAY 2010}
+
+%
+% Advisor info
+%
+\advisorGr{Πρώτο μέλος}
+\advisorRankGr{Βαθμίδα}
+\advisorOrgGr{Οργανισμός}
+\advisorEn{First member}
+\advisorRankEn{Rank}
+\advisorOrgEn{Organization}
+
+%
+% The examination date of the thesis
+%
+\examinationDateGr{15 Μαΐου 2010}
+\examinationDateEn{May 15, 2010}
+
+%
+% Abstract, synopsis, inscription, ack, and preface pages.
+%
+\abstractEn{In recent years machine learning has had significant breakthroughs in many fields mainly through the use of Artificial Neural Networks (ANN). Their name derives from the vague relation shared between their basic elements, 
+namely neurons, to the biological neurons that constitute animal brains. After decades of obscurity due to inadequate results they have recently returned to the forefront of scientific machine learning experimentation.
+The main reason being the work of \cite{aa} which showed substantially improved results over the state of the art, at the time, in image object classification. Following that breakthrough, a trend of using neural networks began 
+to emerge which gave birth to the the area of Deep Learning. Informally, that area constitutes the usage of increasingly deeper and more complex network architectures in order to solve more complicated problems while 
+exploiting the abundance of data that the current technological age offers. The subject of this master thesis is to use a special case of ANN called Convolutional Neural Networks, in the context of multitask learning 
+from spectogram images originating from music data.}
+\abstractGr{Τα τελευταία χρόνια ο κλάδος της μηχανικής μάθησης έχει καταφέρει σημαντική πρόοδο σε πολλές ερευνητικές περιοχές χρησιμοποιώντας Τεχνητά Νευρωνικά Δίκτυα (ΤΝΝ). Το όνομα τους προέρχεται από την αμυδρή σχέση μεταξύ
+των βασικών τους στοιχείων, τους νευρώνες, με τους βιολογικούς νευρώνες που απαρτίζουν τους εγκεφάλους των ζώων. Έπειτα απο δεκαετίες στην αφάνεια λόγω χαμηλής απόδοσης, επέστρεψαν πρόσφατα στο επίκεντρο της επιστημονικής έρευνας.
+Ο κύριος λόγος ήταν η δημοσίευση των \cite{aa} που εμφάνισε σημαντικά βελτιωμένα αποτελέσματα σε σχέση με το state of the art, της περιόδου, στην ταξινόμηση αντικειμένων σε εικόνες. Ακολουθώντας αυτή την πρωτοπορία, μια τάση
+της χρήσης νευωρνικών δικτύων άρχισε να εμφανίζεται που με την σειρά της γέννησε τον κλάδο του Deep Learning. Η περιοχή αυτή αφορά την χρήση βαθύτερων και πολυπλοκότερων αρχιτεκτονικών δικτύων για την επίλυση πιο δύσκολων 
+προβλημάτων εκμεταλλευόμενος την πληθώρα δεδομένων που η τρέχουσα τεχνολογική περίοδος προσφέρει. Το θέμα της μεταπτυχιακής διπλωματικής είναι η χρήση μια ειδικής περίπτωσης ΤΝΝ λεγόμενα Νευρωνικά Δίκτυα Συνέλιξης, στο πλαίσιο
+της μάθησης πολλαπλών στόχων από εικόνες φασματογραφημάτων που προέρχονται από δεδομένα μουσικής.}
+\synopsisGr{Συνοπτική περιγραφή του διδακτορικού (58 σελίδες).}
+\acksEn{}
+\prefaceEn{}
+
+
+%
+% Subject area and keywords
+%
+\subjectAreaGr{Θεματική Περιοχή}
+\subjectAreaEn{Subject Area}
+\keywordsGr{Λέξη κλειδί1, λέξη κλειδί2, λέξη κλειδί3}
+\keywordsEn{Keyword1, keyword2, keyword3}
+
+%
+% Set the .bib file containing your paper publications (leave the extension out)
+%
+% This is optional, but it should be specified when option 'lop' is passed to
+% the document class.
+%
+% Then, inside the document environment, you may use the command '\nocitelop' to
+% site your papers, as you would traditionally do with the commands '\cite' or
+% '\nocite'.
+%
+% The papers are printed in reverse chronological order.
+%
+%\lopfile{mypapers/pubs}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Required Metadata %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frontmatter
+
+% site my papers
+%\nocitelop{}
+
+\mainmatter
+
+% add main chapters (should be given in capital letters)
+\chapter{INTRODUCTION}
+\chapter{BACKGROUND AND RELATED WORK}
+\chapter{ANOTHER CHAPTER}
+\chapter{CONCLUSIONS AND FUTURE WORK}
+
+\backmatter
+
+% abbreviations table
+\abbreviations
+\begin{center}
+	\renewcommand{\arraystretch}{1.5}
+	\begin{longtable}{ l @{\qquad} l }
+	\toprule
+	RDF    & Resource Description Framework \\
+	SPARQL & SPARQL Protocol and RDF Query Language \\
+	OWL    & Web Ontology Language \\
+	OGC    & Open Geospatial Consortium \\
+	\bottomrule
+	\end{longtable}
+\end{center}
+
+% appendix
+\begin{appendix}
+% mark the beginning of the appendix
+\appendixstartedtrue
+
+% add appendix line to ToC
+\phantomsection
+\addcontentsline{toc}{chapter}{APPENDICES}
+
+\chapter{FIRST APPENDIX}
+\chapter{SECOND APPENDIX}
+\chapter{THIRD APPENDIX}
+\end{appendix}
+
+% manually include the bibliography
+\bibliographystyle{plain}
+\bibliography{references}
+% include it also in ToC (do sth on your own)
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+\end{document}

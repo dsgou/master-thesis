@@ -1,0 +1,12 @@
+\thispagestyle {empty}
+{\pdfbookmark [0]{CONTENTS}{toc}}
+\contentsline {chapter}{\numberline {1}INTRODUCTION}{23}{chapter.1}
+\contentsline {chapter}{\numberline {2}BACKGROUND AND RELATED WORK}{25}{chapter.2}
+\contentsline {chapter}{\numberline {3}ANOTHER CHAPTER}{27}{chapter.3}
+\contentsline {chapter}{\numberline {4}CONCLUSIONS AND FUTURE WORK}{29}{chapter.4}
+\contentsline {chapter}{ABBREVIATIONS - ACRONYMS}{31}{chapter*.8}
+\contentsline {chapter}{APPENDICES}{31}{section*.9}
+\contentsline {chapter}{\numberline {A}FIRST APPENDIX}{33}{appendix.A}
+\contentsline {chapter}{\numberline {B}SECOND APPENDIX}{35}{appendix.B}
+\contentsline {chapter}{\numberline {C}THIRD APPENDIX}{37}{appendix.C}
+\contentsline {chapter}{REFERENCES}{39}{appendix*.10}
